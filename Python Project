@@ -1,0 +1,25 @@
+from datetime import datetime
+datetime = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+print("BMI Measuring Time: ", datetime)
+
+# Simple BMI Calculator
+# Input weight and height
+weight = float(input("Enter your weight in kg: "))
+height = float(input("Enter your height in meters: "))
+
+# Calculate BMI
+bmi = weight / (height ** 2)
+
+# Determine the health status
+if bmi < 18.5:
+status = "Underweight"
+elif bmi < 25:
+status = "Normal weight"
+elif bmi < 30:
+status = "Overweight"
+else:
+status = "Obese"
+
+# Output the results
+print("Your BMI is: ", bmi)
+print("Your Health status: ", status)
